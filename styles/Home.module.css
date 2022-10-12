@@ -1,0 +1,23 @@
+.container {
+  margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  padding: 0 24px;
+}
+
+.container > button {
+  margin-top: 24px;
+  background-color: var(--tw-color1);
+  color: #fff;
+  border: 0;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.container > button:hover {
+  background-color: var(--tw-color1-hover);
+}
