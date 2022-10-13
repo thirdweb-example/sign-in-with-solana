@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const login = useLogin();
   const { user } = useUser();
 
-  const handleClick = async () => {
+  const validateUser = async () => {
     try {
       const response = await fetch("/api/validate", {
         method: "POST",
@@ -28,7 +28,7 @@ const Home: NextPage = () => {
     return (
       <div className={styles.container}>
         <p>You are signed in as {user.address}</p>
-        <button onClick={handleClick}>Validate user</button>
+        <button onClick={validateUser}>Validate user</button>
       </div>
     );
   }
