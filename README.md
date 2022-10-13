@@ -1,32 +1,29 @@
-## Solana frontend started kit
+## Sign in with Solana Next
 
-This template has everything you need to build a web3 app on Solana using the thirdweb SDK.
+Here we implement the login with wallet flow using the [Next.js](https://nextjs.org/) framework.
 
-## Getting Started
+## Setup
 
-Create a project using this example:
+To run the project, first clone this repository, and then run one of the following commands to install the dependencies:
 
 ```bash
-npx thirdweb create --template next-typescript-solana-starter
+npm install
+# or
+yarn install
 ```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Next, you need to create a `.env.local` file and add the `PRIVATE_KEY` variable to it with the private key of the wallet you want to use as the admin wallet to generate and verify payloads. Your file should use something like the following:
 
-On `pages/_app.tsx`, you'll find our `ThirdwebProvider` wrapping your app, this is necessary for our hooks to work.
+```.env
+PRIVATE_KEY=...
+```
 
-on `pages/index.tsx`, you'll find an example of a connect wallet button and some hooks.
+Finally, you can run the project with one of the following commands:
 
-## Learn More
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-To learn more about thirdweb and Next.js, take a look at the following resources:
-
-- [thirdweb React Documentation](https://docs.thirdweb.com/react) - learn about our React SDK.
-- [thirdweb TypeScript Documentation](https://docs.thirdweb.com/typescript) - learn about our JavaScript/TypeScript SDK.
-- [thirdweb Portal](https://docs.thirdweb.com) - check our guides and development resources.
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-
-You can check out [the thirdweb GitHub organization](https://github.com/thirdweb-dev) - your feedback and contributions are welcome!
-
-## Join our Discord!
-
-For any questions, suggestions, join our discord at [https://discord.gg/thirdweb](https://discord.gg/thirdweb).
+Now, you can navigate to [http://localhost:3000](http://localhost:3000) to visit the client side page where you can connect a wallet, sign-in with solana and view the payload, and use the payload to authenticate with the backend.
